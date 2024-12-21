@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "0bb3c25c-5bc5-4363-a6e1-7356fad61b30",
+		"name": "jwt example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14842724"
+	},
+	"item": [
+		{
+			"name": "get token User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Test user\",\n    \"password\": \"1111\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8443/auth/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"auth",
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/phonebook\" -H \"Accept: application/json\""
+			},
+			"response": []
+		},
+		{
+			"name": "get token Moderator",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Test moderator\",\n    \"password\": \"2222\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8443/auth/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"auth",
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/phonebook\" -H \"Accept: application/json\""
+			},
+			"response": []
+		},
+		{
+			"name": "get token Admin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Test admin\",\n    \"password\": \"3333\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8443/auth/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"auth",
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/phonebook\" -H \"Accept: application/json\""
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Test user\",\n    \"password\": \"1111\",\n    \"roles\": [\"ROLE_USER\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8443/auth/registration",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"auth",
+						"registration"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/phonebook\" -H \"Accept: application/json\""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Moderator",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Test moderator\",\n    \"password\": \"2222\",\n    \"roles\": [\"ROLE_MODERATOR\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8443/auth/registration",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"auth",
+						"registration"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/phonebook\" -H \"Accept: application/json\""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Admin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Test admin\",\n    \"password\": \"3333\",\n    \"roles\": [\"ROLE_ADMIN\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8443/auth/registration",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"auth",
+						"registration"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/phonebook\" -H \"Accept: application/json\""
+			},
+			"response": []
+		},
+		{
+			"name": "unlock Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZXN0IGFkbWluIiwicm9sZXMiOlt7ImlkIjoyLCJuYW1lIjoiUk9MRV9BRE1JTiJ9XSwiaWF0IjoxNzM0Mjc1Nzg3LCJleHAiOjE3MzQyNzkzODd9.eHLlIgwks7kkf1AOrcaNthjzgIcw3WBKn_1X1lrMs_adklwA6m8IXgwQDqzXF3GwVOw0RGk-EIxfKupMTvRK6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Test user\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8443/admin/unlock",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"admin",
+						"unlock"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/phonebook\" -H \"Accept: application/json\""
+			},
+			"response": []
+		},
+		{
+			"name": "get Admin page",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZXN0IGFkbWluIiwicm9sZXMiOlt7ImlkIjoyLCJuYW1lIjoiUk9MRV9BRE1JTiJ9XSwiaWF0IjoxNzM0Mjc1Nzg3LCJleHAiOjE3MzQyNzkzODd9.eHLlIgwks7kkf1AOrcaNthjzgIcw3WBKn_1X1lrMs_adklwA6m8IXgwQDqzXF3GwVOw0RGk-EIxfKupMTvRK6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8443/admin",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"admin"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/phonebook\" -H \"Accept: application/json\""
+			},
+			"response": []
+		},
+		{
+			"name": "get Moderator page",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZXN0IG1vZGVyYXRvciIsInJvbGVzIjpbeyJpZCI6MywibmFtZSI6IlJPTEVfTU9ERVJBVE9SIn1dLCJpYXQiOjE3MzQyNzU3NTMsImV4cCI6MTczNDI3OTM1M30.vvO6-j0zkAfoUVZxkBTPYn0U2CL1KPkqe5vN6SzvwvP6MOCUuilvuKf1CoD1Pvh4eR1h9r40m30YsoAvTfpKEQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8443/user/moderate",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"user",
+						"moderate"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/phonebook\" -H \"Accept: application/json\""
+			},
+			"response": []
+		},
+		{
+			"name": "get User page",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZXN0IHVzZXIiLCJyb2xlcyI6W3siaWQiOjEsIm5hbWUiOiJST0xFX1VTRVIifV0sImlhdCI6MTczNDI3NjExOCwiZXhwIjoxNzM0Mjc5NzE4fQ.V7r7l20r5adjoZuxlI7cAZ1bP0YLCMyOCY-hPuS4ZIYY0DYLVevRpb5TzVkS9d-qniZLHI79WIgudCMtyNJZPg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8443/user/info",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"user",
+						"info"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/phonebook\" -H \"Accept: application/json\""
+			},
+			"response": []
+		}
+	]
+}
